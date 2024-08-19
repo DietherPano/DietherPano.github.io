@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(https://res.cloudinary.com/dbu4ot4gh/image/upload/v1724033449/bg_vwkbnc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-me{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 90px;
+    overflow: hidden;
+}
+
+.gif{
+    padding-bottom: 5px;
+}
+
+.about-me-box{
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.about-me-text{
+    width: 90%;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.about-me-text h1{
+    padding-left: 15px;
+}
+
+.skills-box{
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.skills-text{
+    width: 100%;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.python-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.javascript-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.c-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.skills-text h1{
+    padding-left: 15px;
+}
+
+.skills-text p {
+    padding-left: 30px;
+}
+
+.btn-box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.btn{
+    color: white;
+    width: 250px;
+    height: 55px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #DA3068,#14469F);
+    font-size: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.bx-right-arrow-alt{
+    margin-left: 0.8em;
+    position: relative;
+}
+
+.bx-left-arrow-alt{
+    margin-right: 5em;
+    position: absolute;
+}
+
+
+@media (max-width:768px){
+    body{
+        touch-action: pan-y;
+        height: 100vh;
+    }
+    .about-me{
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    .about-me-box{
+        font-size: 20px;
+        padding-top: 0;
+        padding-bottom: 5px;
+    }
+
+    .about-me-text h1{
+        font-size: 18px;
+    }
+
+    .skills-box{
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    .skills-text h1{
+        font-size: 20px;
+    }
+
+    .skills-text{
+        font-size: 18px;
+    }
+
+    .python-content{
+        padding-bottom: 5px;
+    }
+
+    .javascript-content{
+        padding-bottom: 5px;
+    }
+
+    .c-content{
+        padding-bottom: 5px;
+    }
+
+    .btn{
+        font-size: 18px;
+        width: 147px;
+        height: 33px;
+    }
+
+    .bx-right-arrow-alt{
+        margin-left: 0.3em;
+    }
+    
+    .bx-left-arrow-alt{
+        margin-right: 5em;
+    }
+}
