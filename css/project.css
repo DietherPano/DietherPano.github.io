@@ -107,6 +107,8 @@ body{
     body{
         touch-action: pan-y;
         height: 100vh;
+        background-size: auto;
+        background-position: center;
     }
 
     .projects{
