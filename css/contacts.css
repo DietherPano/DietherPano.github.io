@@ -134,6 +134,13 @@ section{
 }
 
 @media (max-width:425px){
+    body{
+        touch-action: pan-y;
+        height: 100vh;
+        background-size: auto;
+        background-position: center;
+    }
+    
     header{
         font-size: 16px;
     }
