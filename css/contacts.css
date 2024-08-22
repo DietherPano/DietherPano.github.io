@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(https://res.cloudinary.com/dbu4ot4gh/image/upload/v1724033449/bg_vwkbnc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+}
+
+header img{
+    width: 75px;
+    height: 109px;
+}
+
+section{
+    min-height: 30vh;
+    padding: 3rem;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-contents{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-contents a{
+    display: flex;
+    font-size: 28px;
+    color: black;
+    background: #d9d9d9;
+    width: 462px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+}
+
+.contact-contents a:hover{
+    color: blue;
+}
+
+.contact-img img{
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+
+}
+
+.btn-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bck-btn{
+    color: white;
+    width: 250px;
+    height: 55px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #DA3068,#14469F);
+    font-size: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.bx-left-arrow-alt{
+    margin-right: 5em;
+    position: absolute;
+}
+
+@media (max-width:768px){
+    header{
+        padding: 30px 10px;
+    }
+    header h1{
+        font-size: 30px;
+    }
+
+    header img{
+        width: 42px;
+        height: 59px;
+    }
+
+    .contact-img img{
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .contact-contents a{
+        font-size: 22px;
+        width: 250px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .bck-btn{
+        font-size: 22px;
+        width: 150px;
+        height: 45px;
+    }
+
+}
+
+@media (max-width:425px){
+    header{
+        font-size: 16px;
+    }
+
+    header img{
+        width: 37px;
+        height: 54px;
+    }
+
+    .contacts{
+        flex-direction: column;
+    }
+
+    .contact-img img{
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .contact-contents{
+        gap: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-contents a{
+        font-size: 16px;
+        width: 249px;
+        height: 36px;
+    }
+
+    .bck-btn{
+        width: 147px;
+        height: 33px;
+        font-size: 16px;
+    }
+    
+}

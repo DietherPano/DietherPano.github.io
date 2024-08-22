@@ -31,6 +31,11 @@ header h1{
     margin: 15px;
 }
 
+.header-img{
+    width: 60px;
+    height: 60px;
+}
+
 .img{
     width: 50vh;
     height: 50vh;
@@ -105,6 +110,11 @@ header h1{
 .bx-right-arrow-alt{
     margin-left: 0.3em;
     position: relative;
+}
+
+.abt-img{
+    width: 60px;
+    height: 60px;
 }
 
 /*.contents{
@@ -197,6 +207,36 @@ header h1{
 } */
 
 @media (max-width:768px){
+    .portfolio-text h3{
+        font-size: 24px;
+    }
+    .portfolio-text h1{
+        font-size: 24px;
+    }
+
+    .portfolio-text h1:nth-child(3){
+        font-size: 24px;
+    }
+    
+    .img{
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .btn{
+        width: 150px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .abt-img{
+        width: 45px;
+        height: 45px;
+    }
+
+ }
+
+@media (max-width:425px){
     body{
         touch-action: pan-y;
         position: absolute;
@@ -287,5 +327,15 @@ header h1{
     .bx-right-arrow-alt{
         margin-left: 0.3em;
         position: relative;
+    }
+
+    .abt-img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .header-img{
+        width: 45px;
+        height: 45px;
     }
 }
