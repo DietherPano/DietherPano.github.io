@@ -6,7 +6,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     position: absolute;
     background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(https://res.cloudinary.com/dbu4ot4gh/image/upload/v1724033449/bg_vwkbnc.jpg);
@@ -32,6 +32,9 @@ header img{
 section{
     min-height: 30vh;
     padding: 3rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .contacts{
@@ -59,18 +62,27 @@ section{
     align-items: center;
     border: none;
     border-radius: 15px;
+    
 }
 
 .contact-contents a:hover{
     color: blue;
 }
 
+.contact-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .contact-img img{
     position: relative;
-    width: 50vh;
-    height: 50vh;
+    width: 438px;
+    height: 438px;
     border-radius: 50%;
-
+    object-fit: cover;
+    object-position: top;
 }
 
 .btn-box{
@@ -100,6 +112,17 @@ section{
     position: absolute;
 }
 
+
+/* Laptop L */
+@media (min-width:1440px){
+    .contact-img img{
+        width: 438px;
+        height: 438px;
+    }
+}
+
+
+/* Tablet */
 @media (max-width:768px){
     header{
         padding: 30px 10px;
@@ -114,8 +137,10 @@ section{
     }
 
     .contact-img img{
-        width: 30vh;
-        height: 30vh;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: top;
     }
 
     .contact-contents a{
@@ -133,7 +158,8 @@ section{
 
 }
 
-@media (max-width:425px){
+/* Mobile */
+@media (max-width:430px){
     body{
         touch-action: pan-y;
         height: 100vh;
@@ -155,8 +181,10 @@ section{
     }
 
     .contact-img img{
-        width: 25vh;
-        height: 25vh;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: top;
     }
 
     .contact-contents{

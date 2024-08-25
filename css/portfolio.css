@@ -11,6 +11,9 @@ body{
     background-size: cover;
     background-attachment: fixed;
     /* backdrop-filter: blur(4px); */
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* body::before{
@@ -21,24 +24,24 @@ body{
 } */
 
 header{
-    position: absolute;
+    position: relative;
     width: 100vw;
     display: flex;
     color: white;
-}
-
-header h1{
-    margin: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 50px;
 }
 
 .header-img{
     width: 60px;
     height: 60px;
+
 }
 
 .img{
-    width: 55vh;
-    height: 55vh;
+    width: 400px;
+    height: 400px;
     display: block;
     /* margin-left: 25vw; */
     border-radius: 50%;
@@ -50,20 +53,27 @@ header h1{
 
 .contents{
     position: relative;
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 90px;
+    padding: 100px 90px;
     overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+
 .content-box{
-    width: 50%;
     color: white;
     display: flex;
     align-items: center;
+}
+
+.portfolio-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .portfolio-text h3{
@@ -219,8 +229,8 @@ header h1{
     }
     
     .img{
-        width: 30vh;
-        height: 30vh;
+        width: 250px;
+        height: 250px;
     }
 
     .btn{
@@ -236,7 +246,7 @@ header h1{
 
  }
 
-@media (max-width:425px){
+@media (max-width:430px){
     body{
         touch-action: pan-y;
         position: absolute;
