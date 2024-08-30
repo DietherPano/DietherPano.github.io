@@ -10,18 +10,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* backdrop-filter: blur(4px); */
     overflow-x: hidden;
     height: 100vh;
     width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body::before{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-} */
 
 header{
     position: relative;
@@ -43,7 +37,6 @@ header{
     width: 400px;
     height: 400px;
     display: block;
-    /* margin-left: 25vw; */
     border-radius: 50%;
 }
 
@@ -127,95 +120,7 @@ header{
     height: 60px;
 }
 
-/*.contents{
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 90px;
-    overflow: hidden;
-}
-
-.content-box{
-    width: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.portfolio-text h3{
-    padding-left: 10px;
-    font-size: 35px;
-}
-
-.portfolio-text h1{
-    padding-left: 10px;
-    font-size: 55px;
-}
-
-.portfolio-text h1:nth-child(3){
-    padding-left: 10px;
-    font-size: 35px;
-}
-
-.text{
-    position: relative;
-    font-size: 35px;
-}
-
-
-.btn-box{
-    display: flex;
-    padding-top: 25px;
-    padding-left: 10px;
-}
-
-.btn{
-    color: black;
-    width: 250px;
-    height: 55px;
-    border: 2px solid black;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    font-size: 30px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.bx-right-arrow-alt{
-    margin-left: 0.3em;
-    position: relative;
-    transition: .3s;
-}
-
-.btn:hover{
-    background-color: green;
-}
-
-.btn:hover .bx-right-arrow-alt{
-    translate: 80%;
-    color: black;
-    background-color: transparent;
-}
-
-
-.img_mobile{
-    display: none;
-}
-
-.img{
-    width: 50vh;
-    height: 50vh;
-    display: block;
-    margin-left: 25vw;
-    border-radius: 50%;
-} */
-
+/*Tablet*/
 @media (max-width:768px){
     .portfolio-text h3{
         font-size: 24px;
@@ -246,6 +151,7 @@ header{
 
  }
 
+/*Mobile*/
 @media (max-width:430px){
     body{
         touch-action: pan-y;
