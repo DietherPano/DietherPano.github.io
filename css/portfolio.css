@@ -21,6 +21,7 @@ header{
     position: relative;
     width: 100vw;
     display: flex;
+    align-items: center;
     color: white;
     max-width: 1400px;
     margin: 0 auto;
@@ -141,7 +142,7 @@ header{
     .btn{
         width: 150px;
         height: 45px;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .abt-img{
@@ -158,11 +159,8 @@ header{
         position: absolute;
         font-size: 16px;
         height: 100vh;
-        /* background-image: url(bg.jpg); */
-        /* background-repeat: no-repeat; */
         background-size:auto;
         background-position: center;
-        /* background-attachment:fixed; */
     }
 
     header{

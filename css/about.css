@@ -104,23 +104,14 @@ body{
     height: 48px;
 }
 
-.c-content{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.c-img{
-    width: 48px;
-    height: 48px;
-}
-
 .skills-text h1{
     padding-left: 15px;
+    padding-bottom: 10px;
 }
 
 .skills-text p {
     padding-left: 30px;
+    padding-bottom: 10px;
 }
 
 .btn-box{
@@ -201,9 +192,9 @@ body{
     }
 
     .btn{
-        font-size: 22px;
-        width: 200px;
-        height: 55px;
+        font-size: 20px;
+        width: 150px;
+        height: 45px;
     }
     
 }
@@ -217,7 +208,6 @@ body{
         background-position: center;
     }
     .about-me{
-        font-size: 16px;
         padding: 10px 30px;
     }
 

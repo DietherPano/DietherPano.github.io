@@ -159,9 +159,9 @@ body{
     }
 
     .action-btn{
-        font-size: 22px;
-        width: 200px;
-        height: 55px;
+        font-size: 20px;
+        width: 150px;
+        height: 45px;
     }
 
 }
@@ -176,11 +176,10 @@ body{
     }
 
     .projects{
-        font-size: 16px;
         padding: 10px 30px;
     }
     .projects-box{
-        font-size: 24px;
+        font-size: 20px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
@@ -201,13 +200,13 @@ body{
     }
 
     .hobbies-box{
-        font-size: 24px;
+        font-size: 20px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
 
     .hobbies-list{
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .hobbies-img{
