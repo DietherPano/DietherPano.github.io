@@ -116,10 +116,6 @@ header{
     position: relative;
 }
 
-.abt-img{
-    width: 60px;
-    height: 60px;
-}
 
 /*Tablet*/
 @media (max-width:768px){
@@ -143,11 +139,6 @@ header{
         width: 150px;
         height: 45px;
         font-size: 20px;
-    }
-
-    .abt-img{
-        width: 45px;
-        height: 45px;
     }
 
  }
@@ -241,11 +232,6 @@ header{
     .bx-right-arrow-alt{
         margin-left: 0.3em;
         position: relative;
-    }
-
-    .abt-img{
-        width: 45px;
-        height: 45px;
     }
 
     .header-img{
