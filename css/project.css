@@ -15,7 +15,7 @@ body{
 
 .projects{
     position: relative;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     padding: 0 90px;
     overflow-x: hidden;
@@ -28,7 +28,7 @@ body{
     font-size: 32px;
     display: flex;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
 
 }
@@ -94,7 +94,7 @@ body{
     flex-direction: column;
     padding-top: 15px;
     padding-left: 10px;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -170,7 +170,7 @@ body{
 @media (max-width:430px){
     body{
         touch-action: pan-y;
-        height: 100vh;
+        height: auto;
         background-size: auto;
         background-position: center;
     }

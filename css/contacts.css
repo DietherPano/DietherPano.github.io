@@ -6,7 +6,7 @@
 
 body{
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow-x: hidden;
     position: absolute;
     background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(https://res.cloudinary.com/dbu4ot4gh/image/upload/v1724033449/bg_vwkbnc.jpg);
@@ -34,7 +34,7 @@ section{
     min-height: 30vh;
     padding: 3rem;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -163,7 +163,7 @@ section{
 @media (max-width:430px){
     body{
         touch-action: pan-y;
-        height: 100vh;
+        height: auto;
         background-size: auto;
         background-position: center;
     }
