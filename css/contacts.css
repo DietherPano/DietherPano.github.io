@@ -16,6 +16,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 header{
     width: 100%;
     display: flex;
@@ -23,11 +27,6 @@ header{
     align-items: center;
     color: white;
     font-size: 32px;
-}
-
-header img{
-    width: 75px;
-    height: 109px;
 }
 
 section{
@@ -132,11 +131,6 @@ section{
         font-size: 30px;
     }
 
-    header img{
-        width: 42px;
-        height: 59px;
-    }
-
     .contact-img img{
         width: 250px;
         height: 250px;
@@ -170,11 +164,6 @@ section{
     
     header h1{
         font-size: 20px;
-    }
-
-    header img{
-        width: 37px;
-        height: 54px;
     }
 
     .contacts{

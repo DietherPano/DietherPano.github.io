@@ -10,7 +10,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .projects{
@@ -55,11 +60,6 @@ body{
     background: #d9d9d93d;
 }
 
-.project-img{
-    width: 80px;
-    height: 80px;
-}
-
 .hobbies-box{
     color: #ffffff;
     padding-top: 30px;
@@ -82,11 +82,6 @@ body{
 
 .hobbies-list h1{
     padding-left: 20px;
-}
-
-.hobbies-img{
-    width: 80px;
-    height: 92px;
 }
 
 .action-btn-box{
@@ -133,11 +128,6 @@ body{
         font-size: 22px;
     }
 
-    .project-img{
-        width: 45px;
-        height: 45px;
-    }
-
     .project-btn{
         width: 345px;
         height: 86px;
@@ -147,11 +137,6 @@ body{
     .hobbies-box{
         padding-top: 30px;
         font-size: 22px;
-    }
-
-    .hobbies-img{
-        width: 45px;
-        height: 45px;
     }
 
     .hobbies-list{
@@ -184,11 +169,6 @@ body{
         padding-bottom: 5px;
     }
 
-    .project-img{
-        width: 55px;
-        height: 55px;
-    }
-
     .projects-btn{
         display: flex;
         flex-direction: column;
@@ -207,11 +187,6 @@ body{
 
     .hobbies-list{
         font-size: 18px;
-    }
-
-    .hobbies-img{
-        width: 55px;
-        height: 55px;
     }
 
     .action-btn{

@@ -16,6 +16,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 
 header{
     position: relative;
@@ -25,13 +29,7 @@ header{
     color: white;
     max-width: 1400px;
     margin: 0 auto;
-    padding-right: 50px;
-}
-
-.header-img{
-    width: 60px;
-    height: 60px;
-
+    padding-left: 50px;
 }
 
 .img{
@@ -50,7 +48,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 90px 90px;
+    padding: 70px 70px;
     overflow: hidden;
     max-width: 1400px;
     margin: 0 auto;
@@ -158,6 +156,7 @@ header{
         position: relative;
         width: 100vw;
         display: flex;
+        padding-left: 15px;
     }
 
     header h1{
@@ -187,7 +186,7 @@ header{
     }
 
     .content-box{
-        width: 100%;
+        width: 80%;
         margin-top: 100px;
         height: auto;
         justify-content: center;
