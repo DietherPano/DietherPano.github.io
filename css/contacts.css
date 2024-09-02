@@ -126,8 +126,6 @@ section{
 @media (max-width:768px){
     header{
         padding: 30px 10px;
-    }
-    header h1{
         font-size: 30px;
     }
 
@@ -162,7 +160,7 @@ section{
         background-position: center;
     }
     
-    header h1{
+    header{
         font-size: 20px;
     }
 
