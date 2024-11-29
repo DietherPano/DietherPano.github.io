@@ -1,260 +1,131 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    position: absolute;
-    background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(https://res.cloudinary.com/dbu4ot4gh/image/upload/v1724033449/bg_vwkbnc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body::-webkit-scrollbar{
-    display: none;
-}
-
 .about-me{
-    position: relative;
-    height: auto;
+    display: flex;
+    padding: 60px;
+    justify-content: center;
+    height: 100vh;
     width: 100vw;
-    padding: 0 90px;
-
 }
 
 .about-me-box{
-    color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    font-size: 32px;
     display: flex;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+    justify-content: space-between;
+    height: 500px;
+    width: 80vw;
+    background: #C0C0C0;
+    border: 10px solid black;
+    box-shadow: 15px 15px 4px #00000091;
 }
 
-.about-me-text{
-    width: 90%;
-    color: white;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+.about-me-box h1 {
+    font-family: "Micro 5", sans-serif;
+    font-size: 2.4em;
 }
 
-.about-me-text h1{
-    padding-left: 15px;
+.about-me-box p {
+    padding-left: 40px;
 }
 
-.skills-box{
-    color: #ffffff;
-    padding-top: 50px;
-    padding-bottom: 15px;
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.skills-text{
-    width: 100%;
-    color: white;
-    margin-bottom: 5px;
-    font-size: 26px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.python-content{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.py-img{
-    width: 48px;
-    height: 48px;
-}
-
-.javascript-content{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.js-img{
-    width: 48px;
-    height: 48px;
-}
-
-.skills-text h1{
-    padding-left: 15px;
-    padding-bottom: 10px;
-}
-
-.skills-text p {
-    padding-left: 30px;
-    padding-bottom: 10px;
-}
-
-.btn-box{
+.aboutMeHobbies{
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
-    padding-left: 10px;
-    max-width: 1400px;
-    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+    border-right: 3px solid black;
 }
 
-.btn{
-    color: white;
-    width: 250px;
-    height: 55px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to left, #DA3068,#14469F);
-    font-size: 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-bottom: 20px;
+.about-me-contents{
+    padding: 10px 15px;
+    height: 100%;
 }
 
-.bx-right-arrow-alt{
-    margin-left: 0.8em;
+.hobbies-contents{
+    padding: 10px 15px;
+    height: 100%;
+}
+
+.skills{
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.skills .skill-box{
+    margin: 25px 0;
+    width: 100%;
+}
+
+.skill-box .title {
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.skill-box .skill-bar{
+    height: 8px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+
+.skill-bar .skill-per{
     position: relative;
+    display: block;
+    border-radius: 6px;
+    height: 100%;
+    width: 50%;
+    background: #4070f4;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
 }
 
-.bx-left-arrow-alt{
-    margin-right: 5em;
+.skill-per.python{
+    width: 50%;
+}
+.skill-per.javascript{
+    width: 60%;
+}
+.skill-per.nodejs{
+    width: 40%;
+}
+.skill-per.php{
+    width: 50%;
+}
+.skill-per.cplusplus{
+    width: 20%;
+}
+
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.skill-per .tooltip{
     position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #4070f4;
+    z-index: 1;
 }
 
-/*Tablet*/
-@media (max-width:768px){
-    .about-me{
-        padding: 10px 30px;
-    }
-
-    .about-me-box{
-        font-size: 18px;
-        padding-top: 0;
-        padding-bottom: 5px;
-    }
-
-    .about-me-text{
-        font-size: 18px;
-    }
-
-    .skills-box{
-        padding-top: 15px;
-        font-size: 18px;
-    }
-
-    .skill-img{
-        height: 55px;
-        width: 55px;
-    }
-
-    .python-content{
-        font-size: 22px;
-    }
-
-    .skills-text p{
-        font-size: 22px;
-    }
-
-    .javascript-content{
-        font-size: 22px;
-    }
-
-    .btn{
-        font-size: 20px;
-        width: 150px;
-        height: 45px;
-    }
-    
-}
-
-/*Mobile*/
-@media (max-width:430px){
-    body{
-        touch-action: pan-y;
-        height: auto;
-        background-size: auto;
-        background-position: center;
-    }
-    .about-me{
-        padding: 10px 30px;
-    }
-
-    .about-me-box{
-        font-size: 20px;
-        padding-top: 0;
-        padding-bottom: 5px;
-    }
-
-    .about-me-text h1{
-        font-size: 18px;
-    }
-
-    .skills-box{
-        font-size: 20px;
-        padding-top: 15px;
-        padding-bottom: 5px;
-    }
-
-    .skills-text h1{
-        font-size: 20px;
-    }
-
-    .skills-text{
-        font-size: 18px;
-    }
-
-    .python-content{
-        padding-bottom: 5px;
-    }
-
-    .javascript-content{
-        padding-bottom: 5px;
-    }
-
-    .btn{
-        font-size: 18px;
-        width: 147px;
-        height: 33px;
-    }
-
-    .bx-right-arrow-alt{
-        margin-left: 0.3em;
-    }
-    
-    .bx-left-arrow-alt{
-        margin-right: 5em;
-    }
-
-    .skill-img{
-        width: 45px;
-        height: 45px;
-    }
-
-    .py-img{
-        width: 25px;
-        height: 25px;
-    }
-
-    .js-img{
-        width: 25px;
-        height: 25px; 
-    }
-
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #4070f4;
+    transform: translateX(-50%) rotate(45deg);
 }

@@ -4,29 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <script src="./js/scroll.js" defer></script>
     <title>Diether Pano</title>
     <link rel="icon" href="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/fjgnhxbj95w00zjfza8k" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <img src="https://res.cloudinary.com/dbu4ot4gh/image/upload/w_79,h_79/v1/My%20Folder/nhugzvxhmaat5rwvn7om" class="header-img" alt="">
+    <header id="header-section">
+        <nav>
+            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="Home">Home</a>
+            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="About">About Me</a>
+            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="Projects">Projects</a>
+            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="Contacts">Contacts</a>
+        </nav>
     </header>
     <section class="contents">
-        <img src="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/feipqj1tkirxk9pk12tw" class="img_mobile" alt="">
-        <div class="content-box">
-            <div class="portfolio-text">
-                <h3>Hello Everyone. </h3>
-                <h1>I am Diether Pano</h1>
-                <h1>And I'm a 
-                    <span class="text">Software Developer</span>
-                </h1>
-                <span class="btn-box">
-                    <button type="button" class="btn" onclick="location.href='about.html'">About Me <i class='bx bx-right-arrow-alt'></i></button>
-                </span>
+        <div class="idk">
+            <img src="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/feipqj1tkirxk9pk12tw" class="img" alt="">
+            <div class="content-box">
+                <div class="portfolio-text">
+                    <h1>Hi Im Diether Pano</h1>
+                    <h1>And I'm a 
+                        <span class="text">Software Developer</span>
+                    </h1>
+                    <a href="#"><img src="./svg/instagram-svgrepo-com (1).svg" alt=""></a>
+                    <a href="#"><img src="./svg/facebook-svgrepo-com.svg" alt="" onclick="window.open('https://www.facebook.com/sudothrd')"></a>
+                    <a href="#"><img src="./svg/github-svgrepo-com.svg" alt="" onclick="window.open('https://github.com/DietherPano')"></a>
+                    <a href="#"><img src="./svg/gmail-svgrepo-com (1).svg" alt="" onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=new')"></a>
+                    <p>An aspiring Software Developer</p>
+                </div>
+                <button class="dl-btn">Download Resume(Comming Soon)</button>
             </div>
         </div>
-        <img src="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/feipqj1tkirxk9pk12tw" class="img" alt="">
     </section>
+    <section class="about-me" id="about-me-section">
+        <div class="about-me-box">
+            <div class="aboutMeHobbies">
+                <div class="about-me-contents">
+                    <h1>About Me</h1>
+                    <p>- I'm Diether Pano a Software Developer, my journey is not ended yet and i'm not giving up improving my programming skills.</p>
+                </div>
+                <div class="hobbies-contents">
+                    <h1>Hobbies</h1>
+                    <p>• Online Games</p>
+                    <p>• Coding</p>
+                </div>
+            </div>
+            <div class="skills">
+                <h1>Skills</h1>
+                <div class="skill-box">
+                    <span class="title">Python</span>
+                    <div class="skill-bar">
+                        <span class="skill-per python">
+                            <span class="tooltip">50%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">Javascript</span>
+                    <div class="skill-bar">
+                        <span class="skill-per javascript">
+                            <span class="tooltip">60%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">NodeJs</span>
+                    <div class="skill-bar">
+                        <span class="skill-per nodejs">
+                            <span class="tooltip">40%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">PHP</span>
+                    <div class="skill-bar">
+                        <span class="skill-per php">
+                            <span class="tooltip">50%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">C++</span>
+                    <div class="skill-bar">
+                        <span class="skill-per cplusplus">
+                            <span class="tooltip">20%</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects-section">
+        <div class="projects-box">
+            <h1>Projects</h1>
+            <div class="all-projects">
+                <button class="projectss" onclick="window.open('https://github.com/DietherPano/File-Organizer')">
+                    <div class="proj-title">
+                        <h1>File Organizer</h1>
+                    </div>
+                    <div class="proj-desc">
+                        <p>Helps You Organize your files</p>
+                    </div>
+                </button>
+                <button class="projectss" onclick="window.open('https://github.com/DietherPano/Auto-BackUp')">
+                    <div class="proj-title">
+                        <h1>Auto BackUp</h1>
+                    </div>
+                    <div class="proj-desc">
+                        <p>It helps to automatically backup your files</p>
+                    </div>
+                </button>
+                <button class="projectss" onclick="window.open('https://github.com/DietherPano/nytimes-clone')">
+                    <div class="proj-title">
+                        <h1>NyTimes Clone</h1>
+                    </div>
+                    <div class="proj-desc">
+                        <p>Nytimes Clone All data use here is for educational purposes</p>
+                    </div>
+                </button>
+                <button class="projectss">
+                    <div class="proj-title">
+                        <h1>Threads Clone</h1>
+                    </div>
+                    <div class="proj-desc">
+                        <p>Comming Soon..</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contact-section">
+        <div class="contacts-box">
+            <h1>Contacts</h1>
+            <div class="contact-contents">
+                <button class="box-box" onclick="window.open('https://www.facebook.com/sudothrd')">
+                <h2><img src="./svg/facebook-svgrepo-com.svg" height="55" alt=""> Diether Pano</h2>
+                </button>
+                <button class="box-box" >
+                <h2><img src="./svg/instagram-svgrepo-com (1).svg" height="55" alt=""> sudo_thrd</h2>
+                </button>
+                <button class="box-box" onclick="window.open('https://github.com/DietherPano')">
+                <h2><img src="./svg/github-svgrepo-com.svg" height="55" alt=""> Diether Pano</h2>
+                </button>
+                <button class="box-box" onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=new')">
+                <h2><img src="./svg/gmail-svgrepo-com (1).svg" height="55" alt=""> dietherpano95@gmail.com</h2>
+                </button>
+            </div>
+        </div>
+    </section>
+    <img src="./svg/up-arrow-svgrepo-com.svg" class="eh" id="goup" alt="">
 </body>
 </html>

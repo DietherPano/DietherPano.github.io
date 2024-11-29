@@ -1,205 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    position: absolute;
-    background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(https://res.cloudinary.com/dbu4ot4gh/image/upload/v1724033449/bg_vwkbnc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body::-webkit-scrollbar{
-    display: none;
-}
-
 .projects{
-    position: relative;
-    height: auto;
+    display: flex;
+    padding: 60px;
+    justify-content: center;
     width: 100vw;
-    padding: 0 90px;
-    overflow-x: hidden;
 }
 
 .projects-box{
-    color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    max-width: 1280px;
-    margin: 0 auto;
-
-}
-
-.projects-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.project-btn{
-    height: 188px;
-    width: 370px;
-    border-radius: 15px;
-    border: none;
-    background: #d9d9d977;
-    font-size: 48px;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.project-btn:hover{
-    background: #d9d9d93d;
-}
-
-.hobbies-box{
-    color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.hobbies-list{
-    width: 100%;
-    color: white;
-    margin-bottom: 5px;
-    font-size: 26px;
-    max-width: 1180px;
-    margin: 0 auto;
-}
-
-.hobbies-list p{
-    padding-left: 20px;
-}
-
-.action-btn-box{
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
-    padding-left: 10px;
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 10px 15px;
+    height: auto;
+    width: 90vw;
+    gap: 30px;
+    background: #C0C0C0;
+    border: 10px solid black;
+    box-shadow: 15px 15px 4px #00000091;
 }
 
-.action-btn{
-    color: white;
-    width: 250px;
-    height: 55px;
-    border: none;
+.projects-box h1{
+    font-family: "Micro 5", sans-serif;
+    font-size: 2.4em;
+}
+
+.projects-box .all-projects{
+    margin: 20px 30px;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(to left, #DA3068,#14469F);
-    font-size: 30px;
-    border-radius: 25px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.projects-box .all-projects .projectss{
+    height: 160px;
+    width: 278px;
+    display: flex;
+    border: 7px solid #a3a3a3;
+    box-shadow: 15px 15px 4px #0000004b;
+    background: #D9D9D9;
+    flex-direction: column;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
-.bx-right-arrow-alt{
-    margin-left: 0.8em;
-    position: relative;
+.projects-box .all-projects .projectss:hover{
+    background: #5a5a5a;
 }
 
-.bx-left-arrow-alt{
-    margin-right: 5em;
-    position: absolute;
+.projectss .proj-title{
+    margin: 10px 15px;
 }
 
-/*Tablet*/
-@media (max-width:768px){
-    .projects{
-        padding: 30px 30px;
-    }
-    .projects-box{
-        padding-top: 0;
-        font-size: 22px;
-    }
-
-    .project-btn{
-        width: 345px;
-        height: 86px;
-        font-size: 22px;
-    }
-
-    .hobbies-box{
-        padding-top: 30px;
-        font-size: 22px;
-    }
-
-    .hobbies-list{
-        font-size: 22px;
-    }
-
-    .action-btn{
-        font-size: 20px;
-        width: 150px;
-        height: 45px;
-    }
-
+.proj-desc{
+    width: 100%;
+    margin-top: 20px;
 }
 
-/*Mobile*/
-@media (max-width:430px){
-    body{
-        touch-action: pan-y;
-        height: auto;
-        background-size: auto;
-        background-position: center;
-    }
-
-    .projects{
-        padding: 10px 30px;
-    }
-    .projects-box{
-        font-size: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .projects-btn{
-        display: flex;
-        flex-direction: column;
-    }
-    .project-btn{
-        width: 298px;
-        height: 66px;
-        font-size: 28px;
-    }
-
-    .hobbies-box{
-        font-size: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .hobbies-list{
-        font-size: 18px;
-    }
-
-    .action-btn{
-        font-size: 18px;
-        width: 147px;
-        height: 33px;
-    }
-
-    .bx-right-arrow-alt{
-        margin-left: 0.3em;
-    }
-    
-    .bx-left-arrow-alt{
-        margin-right: 5em;
-    }
+.projectss .proj-desc p{
+    text-align: center;
 }
+
