@@ -137,7 +137,7 @@ header nav img{
 }
 
 .slide h1 {
-    color: black;
+    color: rgb(226, 223, 223);
     font-family: "Micro 5", sans-serif;
     font-weight: 800;
     text-align: center;
@@ -163,7 +163,7 @@ header nav img{
 }
 
 .slide ul li:hover a{
-    color: #00aeff;
+    color: #fbfbfc;
     background-color: #FB773C;
 }
 
@@ -190,7 +190,7 @@ input{
     position: absolute;
     height: 2px;
     width: 20px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border-radius: 50px;
     transition: 0.3s ease;
 }
