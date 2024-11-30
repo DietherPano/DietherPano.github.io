@@ -45,3 +45,33 @@
     font-family: "Micro 5", sans-serif;
     font-size: 2.4em;
 }
+
+.svg{
+    height: 55px;
+}
+
+@media (max-width: 500px){
+    .contacts-box .contact-contents .box-box{
+        width: 260px;
+    }
+    .contacts-box .contact-contents h2{
+        font-size: 1em;
+    }
+
+    .contacts{
+        padding: 30px;
+    }
+    .svg{
+        height: 45px;
+    }
+}
+
+@media(max-width: 350px){
+    .contacts-box .contact-contents .box-box{
+        width: 230px;
+    }
+
+    .svg{
+        height: 25px;
+    }
+}

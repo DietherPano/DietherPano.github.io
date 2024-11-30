@@ -59,3 +59,12 @@
     text-align: center;
 }
 
+@media (max-width: 800px){
+    .projects-box .all-projects .projectss{
+        width: 230px;
+    }
+
+    .projects{
+        padding: 30px;
+    }
+}
