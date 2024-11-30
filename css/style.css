@@ -50,7 +50,9 @@ header nav img{
 }
 
 .contents{
-    height: 95vh;
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     display: flex;

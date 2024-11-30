@@ -3,6 +3,8 @@
     padding: 60px;
     justify-content: center;
     width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .projects-box{

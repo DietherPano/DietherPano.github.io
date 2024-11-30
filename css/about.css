@@ -1,6 +1,8 @@
 .about-me{
     display: flex;
     padding: 60px;
+    max-width: 1440px;
+    margin: 0 auto;
     justify-content: center;
     height: 100vh;
     width: 100vw;
