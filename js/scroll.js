@@ -10,6 +10,20 @@ document.getElementById('Projects').addEventListener('click', () => {
 document.getElementById('Contacts').addEventListener('click', () => {
     document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})
 })
+
+document.getElementById('Home-mbl').addEventListener('click', () => {
+    document.getElementById('header-section').scrollIntoView({behavior: 'smooth'})
+})
+document.getElementById('About-mbl').addEventListener('click', () => {
+    document.getElementById('about-me-section').scrollIntoView({behavior: 'smooth'})
+})
+document.getElementById('Projects-mbl').addEventListener('click', () => {
+    document.getElementById('projects-section').scrollIntoView({behavior: 'smooth'})
+})
+document.getElementById('Contacts-mbl').addEventListener('click', () => {
+    document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})
+})
+
 document.getElementById('goup').addEventListener('click', () => {
     document.getElementById('header-section').scrollIntoView({behavior: 'smooth'})
 })
