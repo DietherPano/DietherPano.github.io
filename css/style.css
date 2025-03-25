@@ -112,7 +112,8 @@ header nav img{
     border-radius: 15px; 
     justify-content: center; 
     align-items: center;
-    font-size: 1em;
+    font-size: 1.5em;
+    text-decoration: none;
     color: white;
     box-shadow: 10px 10px 4px #0000002c;
     cursor: pointer;
