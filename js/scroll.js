@@ -1,29 +1,50 @@
-document.getElementById('Home').addEventListener('click', () => {
-    document.getElementById('header-section').scrollIntoView({behavior: 'smooth'})
-})
-document.getElementById('About').addEventListener('click', () => {
-    document.getElementById('about-me-section').scrollIntoView({behavior: 'smooth'})
-})
-document.getElementById('Projects').addEventListener('click', () => {
-    document.getElementById('projects-section').scrollIntoView({behavior: 'smooth'})
-})
-document.getElementById('Contacts').addEventListener('click', () => {
-    document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})
-})
+document.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById('Home-mbl').addEventListener('click', () => {
-    document.getElementById('header-section').scrollIntoView({behavior: 'smooth'})
-})
-document.getElementById('About-mbl').addEventListener('click', () => {
-    document.getElementById('about-me-section').scrollIntoView({behavior: 'smooth'})
-})
-document.getElementById('Projects-mbl').addEventListener('click', () => {
-    document.getElementById('projects-section').scrollIntoView({behavior: 'smooth'})
-})
-document.getElementById('Contacts-mbl').addEventListener('click', () => {
-    document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})
-})
+  // ===== Smooth scroll =====
+  document.querySelector("a[href='#home']").addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
+  });
 
-document.getElementById('goup').addEventListener('click', () => {
-    document.getElementById('header-section').scrollIntoView({behavior: 'smooth'})
-})
+  document.querySelector("a[href='#about']").addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
+  });
+
+  document.querySelector("a[href='#projects']").addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector("#projects").scrollIntoView({ behavior: "smooth" });
+  });
+
+  document.querySelector("a[href='#contacts']").addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector("#contacts").scrollIntoView({ behavior: "smooth" });
+  });
+
+  // ===== Scroll to top =====
+  const goup = document.getElementById("goup");
+  if (goup) {
+    goup.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("active");
+      });
+    });
+  }
+});

@@ -1,170 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/project.css">
-    <link rel="stylesheet" href="./css/contacts.css">
-    <script src="./js/scroll.js" defer></script>
-    <title>Diether Pano</title>
-    <link rel="icon" href="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/fjgnhxbj95w00zjfza8k" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diether Pano | Portfolio</title>
+
+  <link rel="icon" href="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/fjgnhxbj95w00zjfza8k" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css"/>
+  <script src="./js/scroll.js" defer></script>
 </head>
+
 <body>
-    <label>
-    <input type="checkbox" placeholder="ediwow">
-    <div class="toggle">
-        <span class="topline common"></span>
-        <span class="midline common"></span>
-        <span class="bottomline common"></span>
+  <!-- ==== NAVBAR ==== -->
+  <header class="navbar">
+    <div class="logo">DP</div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+    <div class="menu-toggle" title="Menu"><i class='bx bx-menu'></i></div>
+  </header>
+
+  <!-- ==== HERO SECTION ==== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img 
+        src="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/feipqj1tkirxk9pk12tw"
+        alt="Portrait of Diether Pano"
+        class="profile-img"
+      />
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Diether Pano</span></h1>
+        <h2>Software Developer</h2>
+        <p>An aspiring software developer passionate about backend and modern web applications.</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/sudothrd" target="blank" rel="noopener noreferrer" title="Facebook">
+            <i class='bx bxl-facebook'></i>
+          </a>
+          <a href="https://github.com/DietherPano" target="blank" rel="noopener noreferrer" title="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="blank" rel="noopener noreferrer" title="Gmail">
+            <i class='bx bxl-gmail'></i>
+          </a>
+          <a href="#" title="Instagram">
+            <i class='bx bxl-instagram'></i>
+          </a>
+        </div>
+
+        <a
+          href="https://drive.usercontent.google.com/u/0/uc?id=16yF7Rs-Q96Nve_4_z73BLiay-0093ZRS&export=download"
+          class="btn"
+          download
+          title="Download my CV"
+        >
+          Download CV
+        </a>
+      </div>
     </div>
-    <div class="slide">
-        <h1>Menu</h1>
+  </section>
+
+  <!-- ==== ABOUT SECTION ==== -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Diether Pano, a software developer with a passion for creating dynamic applications. 
+      I enjoy experimenting with new technologies, optimizing performance, 
+      and crafting engaging digital experiences.
+    </p>
+
+    <div class="about-grid">
+      <div class="hobbies">
+        <h3>Hobbies</h3>
         <ul>
-            <li><a id="Home-mbl">Home</a></li>
-            <li><a id="About-mbl">About Me</a></li>
-            <li><a id="Projects-mbl">Projects</a></li>
-            <li><a id="Contacts-mbl">Contacts</a></li>
+          <li>Online Games</li>
+          <li>Coding</li>
         </ul>
+      </div>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>PHP</span>
+          <span>C++</span>
+          <span>Git</span>
+          <span>Docker</span>
+          <span>Virtual Machines</span>
+        </div>
+      </div>
     </div>
-    </label>
-    <header id="header-section">
-        <nav>
-            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="Home">Home</a>
-            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="About">About Me</a>
-            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="Projects">Projects</a>
-            <img src="./svg/backslash-svgrepo-com.svg" alt=""><a id="Contacts">Contacts</a>
-        </nav>
-    </header>
-    <section class="contents">
-        <div class="idk">
-            <img src="https://res.cloudinary.com/dbu4ot4gh/image/upload/f_auto,q_auto/v1/My%20Folder/feipqj1tkirxk9pk12tw" class="img" alt="">
-            <div class="content-box">
-                <div class="portfolio-text">
-                    <h1>Hi Im Diether Pano</h1>
-                    <h1>And I'm a 
-                        <span class="text">Web Developer</span>
-                    </h1>
-                    <a href="#"><img src="./svg/instagram-svgrepo-com (1).svg" alt=""></a>
-                    <a href="#"><img src="./svg/facebook-svgrepo-com.svg" alt="" onclick="window.open('https://www.facebook.com/sudothrd')"></a>
-                    <a href="#"><img src="./svg/github-svgrepo-com.svg" alt="" onclick="window.open('https://github.com/DietherPano')"></a>
-                    <a href="#"><img src="./svg/gmail-svgrepo-com (1).svg" alt="" onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=new')"></a>
-                    <p>An aspiring Software Developer</p>
-                </div>
-                <a href="https://drive.usercontent.google.com/u/0/uc?id=16yF7Rs-Q96Nve_4_z73BLiay-0093ZRS&export=download" download class="dl-btn">Download CV</a>
-            </div>
-        </div>
-    </section>
-    <section class="about-me" id="about-me-section">
-        <div class="about-me-box">
-            <div class="aboutMeHobbies">
-                <div class="about-me-contents">
-                    <h1>About Me</h1>
-                    <p>- I'm Diether Pano a web developer with a passion for building dynamic, applicationds. With a strong foundation in backend development. I'm always eager to experiment with neww technologies, optimize performance, and create engaging digital experiences.</p>
-                </div>
-                <div class="hobbies-contents">
-                    <h1>Hobbies</h1>
-                    <p>• Online Games</p>
-                    <p>• Coding</p>
-                </div>
-            </div>
-            <div class="skills">
-                <h1>Skills</h1>
-                <div class="skill-box">
-                    <span class="title">Python</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">Javascript</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">NodeJs</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">PHP</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">C++</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">Git</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">Virtual Machines</span>
-                </div>
-                <div class="skill-box">
-                    <span class="title">Docker</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects-section">
-        <div class="projects-box">
-            <h1>Projects</h1>
-            <div class="all-projects">
-                <button class="projectss" onclick="window.open('https://github.com/DietherPano/File-Organizer')">
-                    <div class="proj-title">
-                        <h1>File Organizer</h1>
-                    </div>
-                    <div class="proj-desc">
-                        <p>Helps You Organize your files</p>
-                    </div>
-                </button>
-                <button class="projectss" onclick="window.open('https://github.com/DietherPano/Auto-BackUp')">
-                    <div class="proj-title">
-                        <h1>Auto BackUp</h1>
-                    </div>
-                    <div class="proj-desc">
-                        <p>It helps to automatically backup your files</p>
-                    </div>
-                </button>
-                <button class="projectss" onclick="window.open('https://github.com/DietherPano/nytimes-clone')">
-                    <div class="proj-title">
-                        <h1>NyTimes Clone</h1>
-                    </div>
-                    <div class="proj-desc">
-                        <p>Nytimes Clone All data use here is for educational purposes</p>
-                    </div>
-                </button>
-                <button class="projectss" onclick="window.open('https://github.com/DietherPano/Conexus-front')">
-                    <div class="proj-title">
-                        <h1>Conexus-Front</h1>
-                    </div>
-                    <div class="proj-desc">
-                        <p>This is a frontend(SPA) threads clone social media app.</p>
-                    </div>
-                </button>
-                <button class="projectss">
-                    <div class="proj-title">
-                        <h1>Minute Lottto</h1>
-                    </div>
-                    <div class="proj-desc">
-                        <p>Comming Soon..</p>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </section>
-    <section class="contacts" id="contact-section">
-        <div class="contacts-box">
-            <h1>Contacts</h1>
-            <div class="contact-contents">
-                <button class="box-box" onclick="window.open('https://www.facebook.com/sudothrd')">
-                <h2><img src="./svg/facebook-svgrepo-com.svg" alt="" class="svg"> Diether Pano</h2>
-                </button>
-                <button class="box-box" >
-                <h2><img src="./svg/instagram-svgrepo-com (1).svg" alt="" class="svg"> sudo_thrd</h2>
-                </button>
-                <button class="box-box" onclick="window.open('https://github.com/DietherPano')">
-                <h2><img src="./svg/github-svgrepo-com.svg" alt="" class="svg"> Diether Pano</h2>
-                </button>
-                <button class="box-box" onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=new')">
-                <h2><img src="./svg/gmail-svgrepo-com (1).svg" alt="" class="svg"> dietherpano95@gmail.com</h2>
-                </button>
-            </div>
-        </div>
-    </section>
-    <img src="./svg/up-arrow-svgrepo-com.svg" class="eh" id="goup" alt="">
+  </section>
+
+  <!-- ==== PROJECTS SECTION ==== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card" onclick="window.open('https://github.com/DietherPano/File-Organizer')" title="View File Organizer on GitHub">
+        <h3>File Organizer</h3>
+        <p>Helps you organize your files efficiently.</p>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://github.com/DietherPano/Auto-BackUp')" title="View Auto BackUp on GitHub">
+        <h3>Auto BackUp</h3>
+        <p>Automatically backs up your files.</p>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://github.com/DietherPano/nytimes-clone')" title="View NYTimes Clone on GitHub">
+        <h3>NYTimes Clone</h3>
+        <p>Educational clone of the New York Times website.</p>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://github.com/DietherPano/Conexus-front')" title="View Conexus-Front on GitHub">
+        <h3>Conexus-Front</h3>
+        <p>Frontend (SPA) for a Threads-like social media app.</p>
+      </div>
+
+      <div class="project-card disabled" title="Coming soon">
+        <h3>Minute Lotto</h3>
+        <p>Coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== CONTACTS ==== -->
+  <section id="contacts" class="contacts">
+    <h2>Contacts</h2>
+    <div class="contact-grid">
+      <a href="https://www.facebook.com/sudothrd" target="_blank" rel="noopener noreferrer" class="contact-card" title="Facebook">
+        <i class='bx bxl-facebook'></i> Diether Pano
+      </a>
+      <a href="#" class="contact-card" title="Instagram">
+        <i class='bx bxl-instagram'></i> sudo_thrd
+      </a>
+      <a href="https://github.com/DietherPano" target="_blank" rel="noopener noreferrer" class="contact-card" title="GitHub">
+        <i class='bx bxl-github'></i> Diether Pano
+      </a>
+      <a href="mailto:dietherpano95@gmail.com" class="contact-card" title="Email Diether">
+        <i class='bx bxl-gmail'></i> dietherpano95@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- ==== GO UP BUTTON ==== -->
+  <button id="goup" class="go-up" title="Back to top">
+    <i class='bx bx-up-arrow-alt'></i>
+  </button>
 </body>
 </html>
