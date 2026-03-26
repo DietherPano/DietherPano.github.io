@@ -1,0 +1,165 @@
+name: Update Contributions Data
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate contributions snapshot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: dietherpano
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const path = require('path');
+
+          const username = process.env.GITHUB_USERNAME;
+          const token = process.env.GH_TOKEN;
+
+          if (!username || !token) {
+            throw new Error('Missing GITHUB_USERNAME or GH_TOKEN.');
+          }
+
+          const levelMap = {
+            NONE: 'l0',
+            FIRST_QUARTILE: 'l1',
+            SECOND_QUARTILE: 'l2',
+            THIRD_QUARTILE: 'l3',
+            FOURTH_QUARTILE: 'l4',
+          };
+
+          const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+          function emptyWeeks() {
+            return Array.from({ length: 53 }, () => Array.from({ length: 7 }, () => 'l0'));
+          }
+
+          function normalizeCalendar(calendar, year) {
+            if (!calendar || !Array.isArray(calendar.weeks)) {
+              return {
+                contributions: 0,
+                contributionWeeks: emptyWeeks(),
+                monthMarkers: [],
+              };
+            }
+
+            const contributionWeeks = calendar.weeks.map((week) =>
+              week.contributionDays.map((day) => levelMap[day.contributionLevel] || 'l0')
+            );
+
+            const yearPrefix = `${year}-`;
+            const monthToFirstWeek = new Map();
+
+            calendar.weeks.forEach((week, weekIndex) => {
+              week.contributionDays.forEach((day) => {
+                if (!day?.date || !day.date.startsWith(yearPrefix)) return;
+                const month = Number(day.date.slice(5, 7));
+                if (!Number.isInteger(month) || month < 1 || month > 12 || monthToFirstWeek.has(month)) return;
+                monthToFirstWeek.set(month, weekIndex);
+              });
+            });
+
+            const monthMarkers = [...monthToFirstWeek.entries()]
+              .sort((a, b) => a[0] - b[0])
+              .map(([month, weekIndex]) => ({
+                month: monthNames[month - 1],
+                weekIndex,
+              }));
+
+            return {
+              contributions: calendar.totalContributions || 0,
+              contributionWeeks,
+              monthMarkers,
+            };
+          }
+
+          async function fetchCalendarForYear(year) {
+            const query = `
+              query($login: String!, $from: DateTime!, $to: DateTime!) {
+                user(login: $login) {
+                  contributionsCollection(from: $from, to: $to) {
+                    contributionCalendar {
+                      totalContributions
+                      weeks {
+                        contributionDays {
+                          contributionLevel
+                          date
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+            const body = {
+              query,
+              variables: {
+                login: username,
+                from: new Date(Date.UTC(year, 0, 1)).toISOString(),
+                to: new Date(Date.UTC(year, 11, 31, 23, 59, 59)).toISOString(),
+              },
+            };
+
+            const response = await fetch('https://api.github.com/graphql', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+              },
+              body: JSON.stringify(body),
+            });
+
+            if (!response.ok) {
+              throw new Error(`GraphQL request failed for year ${year}: ${response.status}`);
+            }
+
+            const payload = await response.json();
+            return payload?.data?.user?.contributionsCollection?.contributionCalendar;
+          }
+
+          async function main() {
+            const currentYear = new Date().getUTCFullYear();
+            const years = [currentYear, currentYear - 1, currentYear - 2, currentYear - 3];
+            const output = {};
+
+            for (const year of years) {
+              try {
+                const calendar = await fetchCalendarForYear(year);
+                output[String(year)] = normalizeCalendar(calendar, year);
+              } catch {
+                output[String(year)] = {
+                  contributions: 0,
+                  contributionWeeks: emptyWeeks(),
+                  monthMarkers: [],
+                };
+              }
+            }
+
+            const filePath = path.join(process.cwd(), 'docs', 'assets', 'contributions.json');
+            fs.mkdirSync(path.dirname(filePath), { recursive: true });
+            fs.writeFileSync(filePath, JSON.stringify(output, null, 2) + '\n');
+          }
+
+          main().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+          EOF
+
+      - name: Commit updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update contributions snapshot"
+          file_pattern: docs/assets/contributions.json
